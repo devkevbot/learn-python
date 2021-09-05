@@ -30,6 +30,11 @@ def arbitrary_keyword_args(**kwargs):
     print(f"Last name is: {last_name}")
 
 
+def sum_with_type_hints(start_val: int = 0, end_val: int = 0) -> int:
+    values = [num for num in range(start_val, end_val)]
+    return sum(values)
+
+
 foo()
 
 print(add2(2, 4))
@@ -45,3 +50,5 @@ keyword_args(1, 2)
 keyword_args(first=2, second=1)
 
 arbitrary_keyword_args(fname="Tom", lname="Scott")
+
+print(sum_with_type_hints(0, 5))
