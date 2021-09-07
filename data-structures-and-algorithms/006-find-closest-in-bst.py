@@ -1,3 +1,9 @@
+"""
+Given a target value, traverse the binary tree and find the node whose
+value is closest to the target value.
+"""
+
+
 def findClosestHelper(tree, target, closest):
     """
     Recursive implementation

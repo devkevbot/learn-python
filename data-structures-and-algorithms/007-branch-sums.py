@@ -1,3 +1,8 @@
+"""
+Return an array which contains the sums of values from each branch of the BST, from left to right.
+"""
+
+
 # This is the class of the input root. Do not edit it.
 class BinaryTree:
     def __init__(self, value):

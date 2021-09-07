@@ -1,3 +1,8 @@
+"""
+Return the sum of all nodes' depths.
+"""
+
+
 def calculateNodeDepths(node, parent_depth, list_of_depths):
     if node is None:
         return

@@ -1,3 +1,9 @@
+"""
+Array of coins is given e.g. [1, 10, 3]
+Find the minimum amount of change that cannot be created with the coins given.
+"""
+
+
 def nonConstructibleChange(coins):
     """
     Time complexity: O(nlogn) because we sort the coin array.
