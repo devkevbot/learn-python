@@ -13,7 +13,7 @@ def sortedSquaredArray(array):
     Space: New array of n elements is O(n) space
     """
 
-    squared_array = [x*x for x in array]
+    squared_array = [x * x for x in array]
     squared_array.sort()
     return squared_array
 

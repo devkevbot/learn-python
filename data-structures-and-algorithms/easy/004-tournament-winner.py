@@ -18,7 +18,7 @@ def tournamentWinner(competitions, results):
         result = results[index]
         match_winner = competitions[index][1 - result]
 
-        if not(leading_team):
+        if not (leading_team):
             leading_team = match_winner
 
         if match_winner in scores:

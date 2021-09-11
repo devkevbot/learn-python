@@ -9,7 +9,10 @@ def isValidSubsequence(array, sequence):
     desired_num_matches = len(sequence)
     curr_sequence_index = 0
     for num in array:
-        if curr_sequence_index < desired_num_matches and num == sequence[curr_sequence_index]:
+        if (
+            curr_sequence_index < desired_num_matches
+            and num == sequence[curr_sequence_index]
+        ):
             num_matches += 1
             curr_sequence_index += 1
 
