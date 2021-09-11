@@ -12,25 +12,25 @@ def smallestDifference(arrayOne, arrayTwo):
     arrayOne.sort()
     arrayTwo.sort()
 
-    arrayOnePtr = 0
-    arrayTwoPtr = 0
+    arr_one_ptr = 0
+    arr_two_ptr = 0
 
-    smallestDifferenceAmount = float("inf")
-    smallestElements = []
+    smallest_diff_amt = float("inf")
+    smallest_elements = []
 
-    while arrayOnePtr < len(arrayOne) and arrayTwoPtr < len(arrayTwo):
-        arrayOneValue = arrayOne[arrayOnePtr]
-        arrayTwoValue = arrayTwo[arrayTwoPtr]
+    while arr_one_ptr < len(arrayOne) and arr_two_ptr < len(arrayTwo):
+        arr_one_val = arrayOne[arr_one_ptr]
+        arr_two_val = arrayTwo[arr_two_ptr]
 
-        currentDifference = abs(arrayOneValue - arrayTwoValue)
+        curr_diff = abs(arr_one_val - arr_two_val)
 
-        if currentDifference < smallestDifferenceAmount:
-            smallestDifferenceAmount = currentDifference
-            smallestElements = [arrayOneValue, arrayTwoValue]
+        if curr_diff < smallest_diff_amt:
+            smallest_diff_amt = curr_diff
+            smallest_elements = [arr_one_val, arr_two_val]
 
-        if arrayOneValue > arrayTwoValue:
-            arrayTwoPtr += 1
+        if arr_one_val > arr_two_val:
+            arr_two_ptr += 1
         else:
-            arrayOnePtr += 1
+            arr_one_ptr += 1
 
-    return smallestElements
+    return smallest_elements
