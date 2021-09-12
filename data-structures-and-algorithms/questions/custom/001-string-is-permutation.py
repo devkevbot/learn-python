@@ -1,4 +1,7 @@
-def stringIsPermutation(source, target):
+from test import run_test
+
+
+def string_is_permutation(source, target):
     """
     Returns True if target is a permutation of source, False otherwise.
     Time: O(n) where n is length of the longer of the two input strings
@@ -28,28 +31,20 @@ def stringIsPermutation(source, target):
     return True
 
 
-def TestStringIsPermutation():
-    test_inputs = [
-        ("a", "a", True),
-        ("ab", "ab", True),
-        ("ab", "ba", True),
-        ("abc", "cba", True),
-        ("abcd", "dcb", False),
-        ("", "", True),
-        ("a", "", False),
-        ("abc", "a", False),
-        ("---", "-_-", False),
-        ("123456789", "5678901234", True),
-    ]
+test_inputs = [
+    ["a", "a", True],
+    ["ab", "ab", True],
+    ["ab", "ba", True],
+    ["abc", "cba", True],
+    ["abcd", "dcb", False],
+    ["", "", True],
+    ["a", "", False],
+    ["abc", "a", False],
+    ["---", "-_-", False],
+    ["123456789", "5678901234", True],
+]
 
-    for test in test_inputs:
-        (source, target, expected) = test
-        result = stringIsPermutation(source, target)
-
-        input_str = f"Input: '{source}','{target}'".ljust(25)
-        status_str = "FAILED" if result != expected else "OK"
-
-        print(f"{input_str} ... {status_str}")
-
-
-TestStringIsPermutation()
+run_test(
+    string_is_permutation,
+    test_inputs,
+)
