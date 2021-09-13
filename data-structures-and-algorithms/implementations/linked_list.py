@@ -51,6 +51,13 @@ class LinkedList:
         """
         return self.head.value if self.head is not None else None
 
+    @classmethod
+    def from_list(cls, values: list) -> None:
+        linked_list = LinkedList()
+        for value in values:
+            linked_list.add(value)
+        return linked_list
+
     def add(self, value: int) -> None:
         """
         Appends a node containing value to the end of the list
